@@ -1,0 +1,15 @@
+services:
+  x9:
+    build: .
+    container_name: x9
+
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    volumes:
+      - ./data:/app/data
+
+    security_opt:
+      - no-new-privileges:true
