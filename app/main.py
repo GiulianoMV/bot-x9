@@ -79,7 +79,7 @@ class Orchestrator:
         ]
 
     def send_discord_notification(self, short):
-        message = {"content": f"{short['url']}"}
+        message = {"content": f"||@everyone||\n{short['url']}"}
 
         try:
             response = requests.post(
